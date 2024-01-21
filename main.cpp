@@ -1,9 +1,6 @@
 #include <windows.h>
 #include <stdio.h>
 
-/** @brief Hello Bitch
-*
-*/
 LRESULT CALLBACK lpfnWndProcExWin(HWND, UINT, WPARAM, LPARAM);
 
 int WINAPI WinMain(HINSTANCE hThis, HINSTANCE hPrev, LPSTR Args, int NCMD) {
