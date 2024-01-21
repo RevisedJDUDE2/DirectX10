@@ -7,7 +7,6 @@
 LRESULT CALLBACK lpfnWndProcExWin(HWND, UINT, WPARAM, LPARAM);
 
 int WINAPI WinMain(HINSTANCE hThis, HINSTANCE hPrev, LPSTR Args, int NCMD) {
-	MessageBoxW(nullptr, L"Init Successfully", L"", MB_OK);
 	HWND handle;
 	WNDCLASSEXW windowclassexw = { sizeof(WNDCLASSEXW) };
 	windowclassexw.lpszClassName = L"Dx10";
