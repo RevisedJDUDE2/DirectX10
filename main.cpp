@@ -30,7 +30,7 @@ int WINAPI WinMain(HINSTANCE hThis, HINSTANCE hPrev, LPSTR Args, int NCMD) {
 
 	ID3D10Device* Device;
 	IDXGISwapChain* SwapChain;
-
+	ID3D10RenderTargetView* Renderer;
 
 	MSG message = {};
 	bool isOpen = true;
