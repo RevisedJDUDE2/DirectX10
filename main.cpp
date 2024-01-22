@@ -1,4 +1,7 @@
+#pragma comment(lib, "d3d10.lib")
+
 #include <windows.h>
+#include <d3dx10.h>
 #include <stdio.h>
 
 LRESULT CALLBACK lpfnWndProcExWin(HWND, UINT, WPARAM, LPARAM);
@@ -22,6 +25,12 @@ int WINAPI WinMain(HINSTANCE hThis, HINSTANCE hPrev, LPSTR Args, int NCMD) {
 	if (handle == INVALID_HANDLE_VALUE) {
 		MessageBoxW(nullptr, L"cannot create window!", L"", MB_OK);
 	}
+
+	//Direct X Stuff
+
+	ID3D10Device* Device;
+	IDXGISwapChain* SwapChain;
+
 
 	MSG message = {};
 	bool isOpen = true;
