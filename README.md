@@ -1,3 +1,7 @@
+## Controls:
+* Esc - To Escape Fullscreen
+* F11 - To Fullscreen
+
 ## How To Build:
 **!!!I will not put a compiled executable in realeses you must build it your own!!!**
 <br>
