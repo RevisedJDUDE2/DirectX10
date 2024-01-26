@@ -130,7 +130,7 @@ bool InitializeDirect3dApp(HINSTANCE hInstance) {
   DXGI_SWAP_CHAIN_DESC scd;
   scd.BufferDesc.Width = Width;
   scd.BufferDesc.Height = Height;
-  scd.BufferDesc.RefreshRate.Numerator = 60;
+  scd.BufferDesc.RefreshRate.Numerator = 10000;
   scd.BufferDesc.RefreshRate.Denominator = 1;
   scd.BufferDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
   scd.BufferDesc.ScanlineOrdering = DXGI_MODE_SCANLINE_ORDER_UNSPECIFIED;
@@ -206,15 +206,15 @@ bool InitializeDirect3dApp(HINSTANCE hInstance) {
 //////////////////new////////////////////
 bool InitScene() {
   D3DX10_FONT_DESC fd;
-  fd.Height = 64;
+  fd.Height = 18;
   fd.Width = 0;
-  fd.Weight = 0;
+  fd.Weight = 400;
   fd.MipLevels = 1;
   fd.Italic = false;
   fd.CharSet = OUT_DEFAULT_PRECIS;
   fd.Quality = DEFAULT_QUALITY;
   fd.PitchAndFamily = DEFAULT_PITCH | FF_DONTCARE;
-  wcscpy(fd.FaceName, L"Impact");
+  wcscpy(fd.FaceName, L"Arial");
 
   D3DX10CreateFontIndirect(d3dDevice, &fd, &Font);
 
@@ -243,7 +243,7 @@ int messageloop() {
           //////////////////new////////////////////
       D3DXCOLOR fontColor(1.0f, 1.0f, 1.0f, 1.0f);
       RECT rectangle = { 0, 0, 0, 0 };
-      Font->DrawText(0, L"Hello this is Jude", -1, &rectangle, DT_NOCLIP, fontColor);
+      Font->DrawText(0, L"Hello this is Jude\n\tAnd this is a bluescreen", -1, &rectangle, DT_NOCLIP, fontColor);
       SwapChain->Present(0, 0);
       //////////////////new////////////////////
     }
